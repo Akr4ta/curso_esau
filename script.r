@@ -9,7 +9,7 @@ lapply(c("bipartite", "econet", "car", "carData", "circlize",
   }
 )
 install_github("paternogbc/ecodados")
-# carregrar bibliotecas
+# carregando bibliotecas
 lapply(c("bipartite", "econet", "car", "carData", "circlize", "vegan", "igraph", "RColorBrewer", "ecodados", "betapart", "iNEXT", "ggplot2"), library, character.only = TRUE)
 
 # carregando tabelas
@@ -144,12 +144,6 @@ circos.axis(h = "bottom",
             lwd = 1.5,           
             col = "black")      
 }, bg.border = NA)
-
-
-
-
-
-
 
 
 ### outros calculos
