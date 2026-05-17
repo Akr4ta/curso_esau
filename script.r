@@ -1,6 +1,6 @@
 # instalar pacotes caso não estejam instalados
 lapply(c("bipartite", "econet", "car", "carData", "circlize", 
-         "vegan", "igraph", "RColorBrewer", "ecodados", "betapart", "iNEXT"),
+         "vegan", "igraph", "RColorBrewer", "betapart", "iNEXT", "devtools"),
   function(pkg) {
     if (!require(pkg, character.only = TRUE)) {
       install.packages(pkg)
@@ -8,12 +8,13 @@ lapply(c("bipartite", "econet", "car", "carData", "circlize",
     }
   }
 )
+install_github("paternogbc/ecodados")
 # carregrar bibliotecas
 lapply(c("bipartite", "econet", "car", "carData", "circlize", "vegan", "igraph", "RColorBrewer", "ecodados", "betapart", "iNEXT", "ggplot2"), library, character.only = TRUE)
 
 # carregando tabelas
-trophic_pon <- read.delim("data/trophic_pon.txt", row.names=1)
-trophic_bin <- read.delim("data/trophic_bin.txt", row.names=1)
+trophic_pon <- read.delim("../data/trophic_pon.txt", row.names=1)
+trophic_bin <- read.delim("../data/trophic_bin.txt", row.names=1)
 composicao_especies <- ecodados::composicao_anuros_div_taxonomica
 precipitacao <- ecodados::precipitacao_div_taxonomica
 composicao_especies
